@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Frontend Mentor | Time tracking dashboard</title>
+        <link rel="stylesheet" href="output.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body
+        class="bg-[#0F1424] flex justify-center items-center min-h-[100vh] font-custom"
+    >
+        <div
+            class="grid grid-cols-1 gap-7 p-4 md-lg:grid-cols-4 md-lg:grid-rows-2"
+        >
+            <div
+                class="bg-[#1C1F4A] text-white md-lg:max-w-[215px] sm:row-span-2 rounded-[15px]"
+            >
+                <div
+                    class="bg-[#5844ec] h-[68.9%] rounded-[15px] flex md-lg:flex-col md-lg:items-start md-lg:justify-start md-lg:gap-4 justify-center items-center gap-1"
+                >
+                    <img
+                        src="./images/image-jeremy.png"
+                        alt="profile"
+                        class="w-[70px] border-white border-2 rounded-full md-lg:m-6 m-3"
+                    />
+                    <div
+                        class="md-lg:ml-6 md-lg:pt-[10px] md-lg:block flex flex-col justify-center items-start md-lg:pb-0 pb-7 pt-7"
+                    >
+                        <p class="text-[0.8rem] opacity-50">Report for</p>
+                        <h1 class="text-[1.9rem] font-thin">Jeremy Robson</h1>
+                    </div>
+                </div>
+                <div class="h-[30%] flex justify-between items-center">
+                    <div
+                        class="flex md-lg:flex-col md-lg:justify-center justify-around items-start w-[100%]"
+                    >
+                        <button
+                            class="md-lg:ml-6 m-2 text-[0.9rem] active tog-btn p-2 md-lg:p-0"
+                        >
+                            Daily
+                        </button>
+                        <button
+                            class="md-lg:ml-6 m-2 text-[0.9rem] inactive tog-btn p-2 md-lg:p-0"
+                        >
+                            Weekly
+                        </button>
+                        <button
+                            class="md-lg:ml-6 m-2 text-[0.9rem] inactive tog-btn p-2 md-lg:p-0"
+                        >
+                            Monthly
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work -->
+            <div
+                class="bg-[#ff8c64] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] p-0 stats-container"
+            >
+                <div class="overflow-hidden relative h-[20%] w-[100%]">
+                    <img
+                        src="./images/icon-work.svg"
+                        alt="icon-work"
+                        class="absolute w-[65px] z-0 right-3"
+                    />
+                </div>
+                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                    <div
+                        class="flex justify-between items-center p-5 pb-4 pl-6"
+                    >
+                        <div>Work</div>
+                        <img
+                            src="./images/more.svg"
+                            alt="more"
+                            class="w-[30px]"
+                        />
+                    </div>
+                    <div
+                        class="md-lg:p-5 md-lg:pt-0 md-lg:pl-6 pl-5 pr-5 md-lg:pr-0 md-lg:block flex justify-between items-center"
+                    >
+                        <div class="text-[2.8rem] font-thin work-cur">5hrs</div>
+                        <div
+                            class="opacity-50 md-lg:text-[0.8rem] text-[1rem] work-prev"
+                        >
+                            Yesterday - 7hrs
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Play -->
+            <div
+                class="bg-[#58c4e4] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+            >
+                <div class="overflow-hidden relative h-[20%] w-[100%]">
+                    <img
+                        src="./images/icon-play.svg"
+                        alt="icon-work"
+                        class="absolute w-[65px] right-3 z-0"
+                    />
+                </div>
+                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                    <div
+                        class="flex justify-between items-center p-5 pb-4 pl-6"
+                    >
+                        <div>Play</div>
+                        <img
+                            src="./images/more.svg"
+                            alt="more"
+                            class="w-[30px]"
+                        />
+                    </div>
+                    <div
+                        class="md-lg:p-5 md-lg:pt-0 md-lg:pl-6 pl-5 pr-5 md-lg:pr-0 md-lg:block flex justify-between items-center"
+                    >
+                        <div class="text-[2.8rem] font-thin play-cur">1hr</div>
+                        <div class="opacity-50 text-[0.8rem] play-prev">
+                            Yesterday - 2hrs
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study -->
+            <div
+                class="bg-[#ff5c7c] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+            >
+                <div class="overflow-hidden relative h-[20%] w-[100%]">
+                    <img
+                        src="./images/icon-study.svg"
+                        alt="icon-work"
+                        class="absolute w-[65px] right-3 z-0"
+                    />
+                </div>
+                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                    <div
+                        class="flex justify-between items-center p-5 pb-4 pl-6"
+                    >
+                        <div>Study</div>
+                        <img
+                            src="./images/more.svg"
+                            alt="more"
+                            class="w-[30px]"
+                        />
+                    </div>
+                    <div
+                        class="md-lg:p-5 md-lg:pt-0 md-lg:pl-6 pl-5 pr-5 md-lg:pr-0 md-lg:block flex justify-between items-center"
+                    >
+                        <div class="text-[2.8rem] font-thin study-cur">
+                            0hrs
+                        </div>
+                        <div class="opacity-50 text-[0.8rem] study-prev">
+                            Yesterday - 1hr
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise -->
+            <div
+                class="bg-[#50cc84] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+            >
+                <div class="overflow-hidden relative h-[20%] w-[100%]">
+                    <img
+                        src="./images/icon-exercise.svg"
+                        alt="icon-work"
+                        class="absolute w-[65px] right-3 z-0"
+                    />
+                </div>
+                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                    <div
+                        class="flex justify-between items-center p-5 pb-4 pl-6"
+                    >
+                        <div>Exercise</div>
+                        <img
+                            src="./images/more.svg"
+                            alt="more"
+                            class="w-[30px]"
+                        />
+                    </div>
+                    <div
+                        class="md-lg:p-5 md-lg:pt-0 md-lg:pl-6 pl-5 pr-5 md-lg:pr-0 md-lg:block flex justify-between items-center"
+                    >
+                        <div class="text-[2.8rem] font-thin exercise-cur">
+                            1hr
+                        </div>
+                        <div class="opacity-50 text-[0.8rem] exercise-prev">
+                            Yesterday - 1hr
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social -->
+            <div
+                class="bg-[#7834d4] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+            >
+                <div class="overflow-hidden relative h-[20%] w-[100%]">
+                    <img
+                        src="./images/icon-social.svg"
+                        alt="icon-work"
+                        class="absolute w-[65px] right-3 z-0"
+                    />
+                </div>
+                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                    <div
+                        class="flex justify-between items-center p-5 pb-4 pl-6"
+                    >
+                        <div>Social</div>
+                        <img
+                            src="./images/more.svg"
+                            alt="more"
+                            class="w-[30px]"
+                        />
+                    </div>
+                    <div
+                        class="md-lg:p-5 md-lg:pt-0 md-lg:pl-6 pl-5 pr-5 md-lg:pr-0 md-lg:block flex justify-between items-center"
+                    >
+                        <div class="text-[2.8rem] font-thin social-cur">
+                            1hr
+                        </div>
+                        <div class="opacity-50 text-[0.8rem] social-prev">
+                            Yesterday - 3hrs
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Self Care -->
+            <div
+                class="bg-[#f8c45c] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+            >
+                <div class="overflow-hidden relative h-[20%] w-[100%]">
+                    <img
+                        src="./images/icon-self-care.svg"
+                        alt="icon-work"
+                        class="absolute w-[65px] right-3 z-0"
+                    />
+                </div>
+                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                    <div
+                        class="flex justify-between items-center p-5 pb-4 pl-6"
+                    >
+                        <div>Self Care</div>
+                        <img
+                            src="./images/more.svg"
+                            alt="more"
+                            class="w-[30px]"
+                        />
+                    </div>
+                    <div
+                        class="md-lg:p-5 md-lg:pt-0 md-lg:pl-6 pl-5 pr-5 md-lg:pr-0 md-lg:block flex justify-between items-center"
+                    >
+                        <div class="text-[2.8rem] font-thin self-care-cur">
+                            0hrs
+                        </div>
+                        <div class="opacity-50 text-[0.8rem] self-care-prev">
+                            Yesterday - 1hr
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>

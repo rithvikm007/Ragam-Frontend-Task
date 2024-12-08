@@ -1,0 +1,13 @@
+.active {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: 0.5;
+}
+.clip-svg {
+    clip-path: inset(0 0 0 0 round 15px);
+}
+.tog-btn {
+    transition: opacity 0.25s ease-in-out;
+}
