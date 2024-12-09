@@ -11,3 +11,24 @@
 .tog-btn {
     transition: opacity 0.25s ease-in-out;
 }
+
+.toggle {
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2px;
+}
+
+.toggle-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

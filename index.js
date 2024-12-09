@@ -1,72 +1,40 @@
-const data = [
-    {
-        title: "Work",
-        timeframes: {
-            daily: { current: 5, previous: 7 },
-            weekly: { current: 32, previous: 36 },
-            monthly: { current: 103, previous: 128 },
-        },
-    },
-    {
-        title: "Play",
-        timeframes: {
-            daily: { current: 1, previous: 2 },
-            weekly: { current: 10, previous: 8 },
-            monthly: { current: 23, previous: 29 },
-        },
-    },
-    {
-        title: "Study",
-        timeframes: {
-            daily: { current: 0, previous: 1 },
-            weekly: { current: 4, previous: 7 },
-            monthly: { current: 13, previous: 19 },
-        },
-    },
-    {
-        title: "Exercise",
-        timeframes: {
-            daily: { current: 1, previous: 1 },
-            weekly: { current: 4, previous: 5 },
-            monthly: { current: 11, previous: 18 },
-        },
-    },
-    {
-        title: "Social",
-        timeframes: {
-            daily: { current: 1, previous: 3 },
-            weekly: { current: 5, previous: 10 },
-            monthly: { current: 21, previous: 23 },
-        },
-    },
-    {
-        title: "Self Care",
-        timeframes: {
-            daily: { current: 0, previous: 1 },
-            weekly: { current: 2, previous: 2 },
-            monthly: { current: 7, previous: 11 },
-        },
-    },
-];
+let data = [];
 
-const buttons = document.querySelectorAll(".tog-btn");
-const statsContainers = document.querySelectorAll(".stats-container");
+async function loadData() {
+    try {
+        const response = await fetch("./data.json");
+        data = await response.json();
+        console.log(data);
+        updatestats("daily");
+    } catch (error) {
+        console.error("Error reading JSON file:", error);
+    }
+}
 
-buttons.forEach((button) => {
-    button.addEventListener("click", function () {
-        const timeframe = this.innerText.toLowerCase();
-        updatestats(timeframe);
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".tog-btn");
 
-        buttons.forEach((btn) => {
-            btn.classList.remove("active");
-            btn.classList.add("inactive");
+    buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const timeframe = this.innerText.toLowerCase();
+            updatestats(timeframe);
+
+            buttons.forEach((btn) => {
+                btn.classList.remove("active");
+                btn.classList.add("inactive");
+            });
+            this.classList.remove("inactive");
+            this.classList.add("active");
         });
-        this.classList.remove("inactive");
-        this.classList.add("active");
     });
 });
 
 function updatestats(timeframe) {
+    if (data.length === 0) {
+        console.error("Data is not loaded yet!");
+        return;
+    }
+
     data.forEach((activity) => {
         const currentElem = document.querySelector(
             `.${activity.title.toLowerCase().replace(" ", "-")}-cur`
@@ -87,3 +55,57 @@ function updatestats(timeframe) {
         }
     });
 }
+
+loadData();
+
+const toggle = document.querySelector("#toggle");
+const toggleCircle = document.querySelector(".toggle-circle");
+const toggleText = document.querySelector("#toggle-text");
+const containers = document.querySelectorAll(".card");
+
+document.body.classList.add("bg-[#0F1424]", "text-white");
+toggleCircle.style.transform = "translateX(30px)";
+toggleText.innerText = "Dark Mode";
+
+toggle.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.contains("bg-[#0F1424]");
+
+    if (isDarkMode) {
+        document.body.classList.remove("bg-[#0F1424]", "text-white");
+        document.body.classList.add("bg-[#fff]", "text-black");
+        toggleText.innerText = "Light Mode";
+
+        toggle.classList.remove("bg-[#fff]");
+        toggle.classList.add("bg-[#0F1424]");
+
+        toggleCircle.classList.remove("bg-[#fff]");
+        toggleCircle.classList.add("bg-[#0F1424]");
+
+        containers.forEach((container) => {
+            container.style.backgroundColor = "#adadad";
+            container.classList.remove("text-white");
+            container.classList.add("text-black", "group-hover:opacity-60");
+        });
+
+        toggleCircle.style.transform = "translateX(0)";
+    } else {
+        document.body.classList.remove("bg-[#fff]", "text-black");
+        document.body.classList.add("bg-[#0F1424]", "text-white");
+        toggleText.innerText = "Dark Mode";
+
+        toggle.classList.remove("bg-[#0F1424]");
+        toggle.classList.add("bg-[#fff]");
+
+        toggleCircle.classList.remove("bg-[#0F1424]");
+        toggleCircle.classList.add("bg-[#fff]");
+
+        containers.forEach((container) => {
+            container.style.backgroundColor = "#1C1F4A";
+
+            container.classList.remove("text-black", "group-hover:opacity-60");
+            container.classList.add("text-white");
+        });
+
+        toggleCircle.style.transform = "translateX(30px)";
+    }
+});

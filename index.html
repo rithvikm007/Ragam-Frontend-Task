@@ -20,16 +20,25 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body
-        class="bg-[#0F1424] flex justify-center items-center min-h-[100vh] font-custom"
+        class="bg-[#0F1424] flex justify-center items-center min-h-[100vh] font-custom relative text-white"
     >
+        <div class="flex items-center mb-4 absolute top-5 right-5">
+            <div
+                id="toggle"
+                class="toggle mr-2 flex justify-center bg-[#dedede]"
+            >
+                <div class="toggle-circle bg-[#fff]"></div>
+            </div>
+            <span id="toggle-text" class="text-[1rem]">Dark mode</span>
+        </div>
         <div
             class="grid grid-cols-1 gap-7 p-4 md-lg:grid-cols-4 md-lg:grid-rows-2"
         >
             <div
-                class="bg-[#1C1F4A] text-white md-lg:max-w-[215px] sm:row-span-2 rounded-[15px]"
+                class="bg-[#1C1F4A] text-white md-lg:max-w-[215px] sm:row-span-2 rounded-[15px] card hover:scale-105 transform transition-transform hover:bg-[#6b71c0] hover:shadow-lg group"
             >
                 <div
-                    class="bg-[#5844ec] h-[68.9%] rounded-[15px] flex md-lg:flex-col md-lg:items-start md-lg:justify-start md-lg:gap-4 justify-center items-center gap-1"
+                    class="bg-[#5844ec] h-[68.9%] rounded-[15px] flex md-lg:flex-col md-lg:items-start md-lg:justify-start md-lg:gap-4 justify-center items-center gap-1 group-hover:bg-[#8f81f7]"
                 >
                     <img
                         src="./images/image-jeremy.png"
@@ -68,7 +77,7 @@
 
             <!-- Work -->
             <div
-                class="bg-[#ff8c64] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] p-0 stats-container"
+                class="bg-[#ff8c64] flex flex-col justify-end items-center md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] p-0 hover:scale-105 transform transition-transform hover:bg-[#fbc7b6] hover:shadow-lg group"
             >
                 <div class="overflow-hidden relative h-[20%] w-[100%]">
                     <img
@@ -77,7 +86,9 @@
                         class="absolute w-[65px] z-0 right-3"
                     />
                 </div>
-                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                <div
+                    class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10 card text-white group-hover:bg-[#6b71c0]"
+                >
                     <div
                         class="flex justify-between items-center p-5 pb-4 pl-6"
                     >
@@ -103,7 +114,7 @@
 
             <!-- Play -->
             <div
-                class="bg-[#58c4e4] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+                class="bg-[#58c4e4] flex flex-col justify-end items-center md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] hover:scale-105 transform transition-transform hover:bg-[#82e2ff] hover:shadow-lg group"
             >
                 <div class="overflow-hidden relative h-[20%] w-[100%]">
                     <img
@@ -112,7 +123,9 @@
                         class="absolute w-[65px] right-3 z-0"
                     />
                 </div>
-                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                <div
+                    class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10 card text-white group-hover:bg-[#6b71c0]"
+                >
                     <div
                         class="flex justify-between items-center p-5 pb-4 pl-6"
                     >
@@ -136,7 +149,7 @@
 
             <!-- Study -->
             <div
-                class="bg-[#ff5c7c] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+                class="bg-[#ff5c7c] flex flex-col justify-end items-center md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] hover:scale-105 transform transition-transform hover:bg-[#fa879e] hover:shadow-lg group"
             >
                 <div class="overflow-hidden relative h-[20%] w-[100%]">
                     <img
@@ -145,7 +158,9 @@
                         class="absolute w-[65px] right-3 z-0"
                     />
                 </div>
-                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                <div
+                    class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10 card text-white group-hover:bg-[#6b71c0]"
+                >
                     <div
                         class="flex justify-between items-center p-5 pb-4 pl-6"
                     >
@@ -171,7 +186,7 @@
 
             <!-- Exercise -->
             <div
-                class="bg-[#50cc84] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+                class="bg-[#50cc84] flex flex-col justify-end items-center md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] hover:scale-105 transform transition-transform hover:bg-[#88f1b3] hover:shadow-lg group"
             >
                 <div class="overflow-hidden relative h-[20%] w-[100%]">
                     <img
@@ -180,7 +195,9 @@
                         class="absolute w-[65px] right-3 z-0"
                     />
                 </div>
-                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                <div
+                    class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10 card text-white group-hover:bg-[#6b71c0]"
+                >
                     <div
                         class="flex justify-between items-center p-5 pb-4 pl-6"
                     >
@@ -206,7 +223,7 @@
 
             <!-- Social -->
             <div
-                class="bg-[#7834d4] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+                class="bg-[#7834d4] flex flex-col justify-end items-center md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] hover:scale-105 transform transition-transform hover:bg-[#ab6efb] hover:shadow-lg group"
             >
                 <div class="overflow-hidden relative h-[20%] w-[100%]">
                     <img
@@ -215,7 +232,9 @@
                         class="absolute w-[65px] right-3 z-0"
                     />
                 </div>
-                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                <div
+                    class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10 card text-white group-hover:bg-[#6b71c0]"
+                >
                     <div
                         class="flex justify-between items-center p-5 pb-4 pl-6"
                     >
@@ -241,7 +260,7 @@
 
             <!-- Self Care -->
             <div
-                class="bg-[#f8c45c] flex flex-col justify-end items-center text-white md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] stats-container"
+                class="bg-[#f8c45c] flex flex-col justify-end items-center md-lg:w-[215px] w-[350px] md-lg:max-w-[215px] md-lg:max-h-[210px] md-lg:h-[210px] h-[180px] rounded-[15px] rounded-bl-[18px] rounded-br-[18px] hover:scale-105 transform transition-transform hover:bg-[#f3ce86] hover:shadow-lg group"
             >
                 <div class="overflow-hidden relative h-[20%] w-[100%]">
                     <img
@@ -250,7 +269,9 @@
                         class="absolute w-[65px] right-3 z-0"
                     />
                 </div>
-                <div class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10">
+                <div
+                    class="w-[100%] h-[80%] bg-[#1C1F4A] rounded-[15px] z-10 card text-white group-hover:bg-[#6b71c0]"
+                >
                     <div
                         class="flex justify-between items-center p-5 pb-4 pl-6"
                     >
@@ -274,6 +295,6 @@
                 </div>
             </div>
         </div>
-        <script src="./index.js"></script>
+        <script src="./index.js" type="module"></script>
     </body>
 </html>
